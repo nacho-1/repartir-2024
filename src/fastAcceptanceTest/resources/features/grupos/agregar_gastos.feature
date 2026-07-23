@@ -2,7 +2,7 @@
 
 Característica: Agregar gastos a un grupo
 
-  Regla: El total del grupo debe ser mayor o igual a 0
+  Regla: El total del grupo no puede ser negativo
 
     Escenario: No puedo setear el total en negativo
       Dado un grupo con total 0

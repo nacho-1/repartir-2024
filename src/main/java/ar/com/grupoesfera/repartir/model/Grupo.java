@@ -31,7 +31,6 @@ public class Grupo {
     private BigDecimal total;
 
     public Grupo() {
-        this.total = BigDecimal.ZERO;
     }
 
     public Grupo(long id) {
@@ -75,7 +74,11 @@ public class Grupo {
     }
 
     public void agregarGasto(BigDecimal gasto) {
-        this.setTotal(this.total.add(gasto));
+        if (this.total == null) {
+            this.setTotal(gasto);
+        } else {
+            this.setTotal(this.total.add(gasto));
+        }
     }
 
     public boolean estaFormado() {
